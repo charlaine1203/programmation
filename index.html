@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <meta name="description" content="Site regroupant tous nos services">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+        header{
+            background-color: #333;
+            color: white;
+            padding: 1 em  0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15 px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        section {
+            background-color: white;
+         padding: 40px 30px;
+         margin-bottom: 30px;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 15px;
+        }
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        form input[type="text"],form input[type="email"],form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; 
+            padding: 20px;
+            margin-top: 30px;
+            background-color: white;
+        }
+
+        .grid-card {
+            background-color:white;
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .grid-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; 
+            display: block; 
+        }
+
+        .icon-text-container {
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            margin-right: 0px;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100 px;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            margin-right: 14px; 
+            font-size: 1em; 
+            width: 40px;
+            height: 40px;
+        }
+        .icon-list-container{
+         display: flex;
+         flex-direction: column;
+         align-items:center;
+         gap: 15px;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block; 
+        }
+        .image-container img {
+            display: block; 
+            width: auto;
+            max-width: 80 vw; 
+            height: auto; 
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white;
+            padding: 15px 30px; 
+            font-size: 2.5em; 
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Mon site Web</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="a-propos.html">A Propos</a>
+                </li>
+                <li>
+                    <a href="mon-cv.html">Curriculum Vitae</a>
+                </li>
+                <li>
+                    <a href="disposition_image.html">Images</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contacts</a>
+                </li>
+                <li>
+                    <a href="deroulant.html">Menu</a>
+                </li>
+                <li>
+                    <a href="pont blanc .html">Pont Blanc</a>
+                </li>
+                <li>
+                    <a href="formulaire.html">formulaire</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Mon portfolio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="a-propos">
+            <h1>Nous offrons un enseignement complet  et de qualite dans nos diverses structures</h1>
+            <p> L'expertise n'est acquise que par un travail de forgeron. <br> Comme nous , vous pouvez tout aussi programmer, il faut juste de la methode , un objectif et des encadreurs de cadre.</p>
+        </section>
+        <section id="CV">
+            <h1>Curriculum Vitae</h1>
+            <h1>LEUCHI WANSI BELVA CHARLAINE</h1>
+            <ul>OBJECTIFS
+                 <li>Gagner une expérience Professionnelle de renom</li>
+                 <li>Trouver un cadre de travail qui sera s'adapter a mon emploi de temps et moi au leurs</li>
+                 <li>Avoir un salaire me permettant de financer d'une part mes etudes et d'autres part mon quotidient</li>    
+             </ul>
+            <ul>FORMATIONS
+                 <li>A Etudier au Lycee Bilingue de Bepanda 2008-2021</li>
+                <li>A Etudier au Lycee Bilingue de Logpom II 2021-2024</li>
+            </ul>
+            <p>Titulaire d'un BACCALAUREAT C 2024 au LY.BI.LOG</p>
+        </section>
+        <section id="disposition_image">
+            <h2>Mes projets et realisations</h2>
+            <p>Decouvrez ci-dessous l'une de mes competences en matiere de realisation de cadres photos</p>
+            <div class="gallery-grid">
+                <div class="grid-card">
+                    <img src="pont .jpg" alt="projet pont blanc" class="card img">
+                </div>
+                <div class="grid-card">
+                    <img src="temple.jpg" alt="un temple" class="card img">
+                </div>
+                <div class="grid-card">
+                    <img src="vue.jpg" alt="Coucher de soleil sur la mer" class="card img">
+                </div>
+                <div class="grid-card">
+                    <img src="jolie.jpg" alt="Magnifique" class="card img">
+                </div>
+            </div>
+        </section>
+        <section id="deroulant">
+            <div class="dropdown">
+                <header>
+                    <details>
+                        <summary>
+                            <a href="pont blanc .html">Accueil</a>
+                        </summary>
+                        <summary>
+                            <a href="a-propos.html">A PROPOS</a>
+                        </summary>
+                        <summary>
+                             <a href="contact.html">FORMULAIRE</a>
+                        </summary>
+                        <details>CONTACTS
+                            <summary>
+                                 <a href="https://.www.istagram.com">INSTAGRAM</a>
+                            </summary>
+                            <summary>
+                                <a href="https://www.whatsApp.com"> WHATSAPP</a>
+                            </summary>
+                        </details>
+                    </details>
+         
+    
+                </header>
+         </div>
+        </section>
+        <section id="TPE">
+           <div class="icon-text-container">
+             <span class="icon">🌍</span>
+             <span><strong>NOS POSITIONS</strong></span>
+           </div>
+
+           <div class="icon-text-container">
+             <span class="icon">🍴</span>
+             <span><strong>RESTAURANT A PROXIMITE</strong></span>
+           </div>
+           <div class="icon-text-container">
+             <i class="fa-solid fa-house icon">  Nos centres </i>
+            </div>
+           <div class="icon-text-container">
+             <i class="fa-brands  fa-linkedin icon">  les encadreurs </i>
+           </div>
+           <div class="icon-text-container">
+             <i class="fa-brands  fa-instagram icon"> Publications </i>
+           </div>
+           <div class="icon-text-container">
+             <i class="fa-brands  fa-phone icon">  Contacts </i>
+           </div>
+           <div class="icon-text-container">
+             <i class="fa-brands  fa-envelope icon">E-mail </i>
+           </div>
+       </section>
+       <section id="pont">
+          
+       <section id="contact">
+          <h1>Contactez nous</h1><br>
+          <p>Vous pouvez nous contacter via les formulaires suivant :</p> <br>
+          <a href="formulaire.html">formulaire</a>
+          <p>vous pouvez nous contacter via les numeros :</p>
+          <a href="657904152">Numero de telephone</a>
+       </section>
+
+</main>
+<footer>
+     <p><strong>&copy;LEUCHI WANSI BELVA CHARLAINE. Tout droit d'auteurs réservés</strong> </p>
+</footer>
+</body>
+</html>
