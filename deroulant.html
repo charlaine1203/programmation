@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lien avec Menu Déroulant</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            z-index: 10;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+          <header>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown-button">Menu</button>
+                <p>Ceci est un menu deroulant cliquer dessus pour voir les option </p>
+                <div class="dropdown-content">
+            <a href="pont blanc .html">Accueil</a>
+            <a href="a-propos.html">A PROPOS</a>
+            <a href="contact.html">FORMULAIRE</a>
+
+            <details>
+                <summary>CONTACTS</summary>
+                <ul>
+            <li><a href="https://.www.istagram.com">INSTAGRAM</a></li>
+            <li><a href="https://www.whatsApp.com"> WHATSAPP</a></li>
+           </ul>
+            </details>
+            
+            <a href="TPE.html">Nos icones</a>
+           </div>
+        </div>
+        </nav>
+    </header>
+       
+    </div>
+<footer>
+   <p> &copy;LEUCHI WANSI BELVA CHARLAINE Tout droit d'auteurs réservés</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disposition Photo Grid-Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .grid-container {
+            display: grid;
+            /* Crée des colonnes automatiques et adaptatives */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; /* Espace entre les cartes */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden; /* Assure que l'image ne dépasse pas les bords arrondis */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out; /* Animation au survol */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Légère élévation au survol */
+        }
+
+        .card img {
+            width: 100%; /* L'image prend toute la largeur de la carte */
+            height: 200px; /* Hauteur fixe pour les images */
+            object-fit: cover; /* Recadre l'image pour couvrir l'espace sans la déformer */
+            display: block; /* Supprime l'espace sous l'image */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="temple.jpg" alt="temple chinois">
+            <div class="card-content">
+                <h3>Temple</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="vue.jpg" alt="mer et coucher de soleil">
+            <div class="card-content">
+                <h3>Mer</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="jolie.jpg" alt="magnifique">
+            <div class="card-content">
+          <h3>jolie vue</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pont .jpg" alt="Pont blanc">
+            <div class="card-content">
+                <h3>Pont blanc</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="arbre_de_vie.jpg" alt="Description de la photo 5">
+            <div class="card-content">
+                <h3>arbre_de_vie</h3>
+                </div>
+           </div>     
+
+        <div class="card">
+            <img src="espace vert.jpg" alt="Description de la photo 6">
+            <div class="card-content">
+                <h3>Verdure</h3>
+</div>
+</div>
+</div>
+</body>
+</html>
+
